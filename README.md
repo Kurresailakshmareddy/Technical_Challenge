@@ -95,10 +95,10 @@ To set up and run this project locally, follow these steps:
 
 ## Acknowledgments
 
-- **Images:** Thank you to Google Images and Formula 1 Official Website for providing images used in the application.
-- **External Data:** Thank you to Formula 1 Official Website for providing external links used in the application.
+- **Images:** Thank you to Google Images and Formula 1 Official Website for images used in the application.
+- **External Data:** Thank you to Formula 1 Official Website for external links used in the application.
 - Thanks to the developers and maintainers of the Ergast API and Wikipedia API for providing valuable data.
 
 ## License
 
-This project does not have a specified license. Feel free to use and modify the code as needed.
+This project does not have a specified license.
