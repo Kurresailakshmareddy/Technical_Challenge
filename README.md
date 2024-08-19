@@ -68,26 +68,20 @@ To set up and run this project locally, follow these steps:
 
 4. **Navigate to the Project Directory:**
 
-  ```bash
-   cd 'File Name'
-   
-   **Ex:** cd f1-data-visualization-web-app
+   ```bash
+   cd 'File Name'  **Ex:** cd f1-data-visualization-web-app
 
 ## Running the Application with Docker
 
-1. **Build the Docker Image**
+1. **Build the Docker Image:**
 
    ```bash
-   docker build -t 'your specific image name' .
-   
-   **Ex:** docker build -t f1-data-visualization .
+    docker build -t 'your specific image name' .  **Ex:** docker build -t f1-data-visualization .
 
-2. **Run the Docker Container**
+2. **Run the Docker Container:**
 
    ```bash
-    docker run -p 8080:8080 'your specific image name'
-    
-    **Ex:** docker run -p 8080:8080 f1-data-visualization
+    docker run -p 8080:8080 'your specific image name'   **Ex:** docker run -p 8080:8080 f1-data-visualization
 
 3. **Access the application**
 
