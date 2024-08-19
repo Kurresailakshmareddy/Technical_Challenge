@@ -86,7 +86,7 @@ To set up and run this project locally, follow these steps:
 3. **Access the application**
 
    - Open your web browser and navigate to <http://localhost:8080>.
-   - Open your web browser and navigate with your IP address link provided in terminal after entering the command "docker run -p 8080:8080 'your specific image name' ". **Ex:** <http://111.0.0.0:8080>
+   - Open your web browser and navigate with your IP address link provided in terminal after entering the command "(docker run -p 8080:8080 'your specific image name')". **Ex:** <http://111.0.0.0:8080>
 
 ## Data Source
 
