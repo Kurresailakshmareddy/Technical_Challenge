@@ -1,0 +1,79 @@
+:root {
+    /* Colors */
+    --bg-color-card-box: rgba(10, 10, 10, 0.311);
+    --bg-color-card-body: rgba(150, 120, 120, 0.311);
+    --text-color-card-text: rgb(51, 51, 51);
+    --text-color-card-text-hover: rgb(255, 0, 0);
+
+    /* Spacing, Dimensions and layout */
+    --box-shadow-card: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --box-shadow-card-hover: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --backdrop-blur: blur(5px);
+    --font-size-card-text: 1em;
+    --max-width-card: 400px;
+    --max-height-card: 350px;
+    --card-img-height: 300px;
+    --transition-speed: 0.3s;
+}
+
+.card_box {
+    padding: 20px;
+    background: var(--bg-color-card-box);
+    box-shadow: var(--box-shadow-card);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.card {
+    max-width: var(--max-width-card);
+    max-height: var(--max-height-card);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    cursor: pointer;
+    margin: auto;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-card-hover);
+}
+
+.card-body {
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--bg-color-card-body);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+}
+
+.card-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--font-size-card-text);
+    color: var(--text-color-card-text);
+    margin: auto;
+}
+
+.card-text:hover {
+    text-decoration: none;
+    color: var(--text-color-card-text-hover);
+}
+
+.card-img-top {
+    width: 100%;
+    height: var(--card-img-height);
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card a:hover {
+    color: var(--text-color-card-text-hover);
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page Title -->
+    <title>Formula One</title>
+
+    <!-- Favicon for the website, displayed in the browser tab -->
+    <link rel="shortcut icon" href="../images/footer_img.png" type="image/x-icon">
+
+    <!-- Preconnect to Google Fonts for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts for custom typography -->
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Poppins&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS for styling and responsive design -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Font Awesome for additional icon fonts -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Remix Icon for additional icon options -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="" />
+
+    <!-- Custom CSS for specific styling -->
+    <link rel="stylesheet" href="../CSS/header.css" />
+    <link rel="stylesheet" href="../CSS/footer.css" />
+    <link rel="stylesheet" href="../CSS/cards.css" />
+    <link rel="stylesheet" href="../CSS/schedule_main.css" />
+
+</head>
+
+<body>
+    <!-- Banner section with logo and title -->
+    <section id="banner">
+        <div class="log_header">
+            <!-- Link to homepage with logo text -->
+            <a href="../../index.html" class="logo_text">
+                <h1>Formula One</h1>
+            </a>
+            <!-- Link to homepage with logo image -->
+            <a href="../../index.html" class="logo_text">
+                <img src="../images/f1-logo.png" class="logo" alt="Formula One" />
+            </a>
+        </div>
+        <!-- Banner text for the current page -->
+        <div class="banner-text">
+            <h1>Race Schedule / Seasons</h1>
+        </div>
+    </section>
+
+    <!-- Sidebar navigation menu -->
+    <div id="sideNav">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <!-- Navigation links -->
+                    <li><a href="../../index.html">HOME</a></li>
+                    <li><a href="../HTML/result.html">SEASON RESULTS</a></li>
+                    <li><a href="../HTML/D_C_standings.html">SEASON STANDINGS</a></li>
+                    <li><a href="../HTML/driver_main.html">DRIVERS/RIDERS</a></li>
+                    <li><a href="../HTML/team_main.html">TEAMS/CONSTRUCTORS</a></li>
+                    <li><a href="../HTML/circuits_main.html">CIRCUITS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Menu Button: For toggling the side navigation menu -->
+    <div id="menuBtn">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+
+    <!-- Main content section for race schedule -->
+    <section id="raceSchedule-search">
+        <!-- Countdown timer (functionality may be defined in JavaScript) -->
+        <div id="countdown" class="countdown"></div>
+
+        <div class="container scheduleInfo">
+            <!-- Form for searching races by year and country -->
+            <div class="schedule-form">
+                <input type="number" id="yearInput" placeholder="Enter year" value="2024">
+                <button class="race_btn" onclick="fetchRacesByYear()" title="search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+                <select id="countrySelect" title="raceCountry" class="country">
+                    <option value="">Select Country</option>
+                    <!-- Options for countries will be populated dynamically -->
+                </select>
+            </div>
+
+            <!-- Table to display the race schedule -->
+            <div class="container raceSchedule-table">
+                <div class="table-container">
+                    <table id="raceTable">
+                        <thead>
+                            <tr>
+                                <th>Round</th>
+                                <th>Race Name</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Circuit</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody id="raceTableBody">
+                            <!-- Race rows will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section with cards for different site sections -->
+    <section id="cards">
+        <div class="container-fulid card_box">
+            <div class="row">
+                <!-- Card for Teams or Constructors -->
+                <div class="col">
+                    <div class="card">
+                        <a href="../HTML/team_main.html">
+                            <img src="../images/teams.webp" class="card-img-top" alt="Teams or Constructors">
+                            <div class="card-body">
+                                <p class="card-text">TEAMS / CONSTRUCTORS</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card for Standings -->
+                <div class="col">
+                    <div class="card">
+                        <a href="../HTML/D_C_standings.html">
+                            <img src="../images/seasons.jpg" class="card-img-top" alt="Standings">
+                            <div class="card-body">
+                                <p class="card-text">STANDINGS</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card for Circuits -->
+                <div class="col">
+                    <div class="card">
+                        <a href="../HTML/circuits_main.html">
+                            <img src="../images/race_track.webp" class="card-img-top" alt="Circuits">
+                            <div class="card-body">
+                                <p class="card-text">CIRCUITS</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Card for Season Results -->
+                <div class="col">
+                    <div class="card">
+                        <a href="../HTML/result.html">
+                            <img src="../images/result.avif" class="card-img-top" alt="Seasons results">
+                            <div class="card-body">
+                                <p class="card-text">SEASON RESULTS</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card for Drivers or Riders -->
+                <div class="col">
+                    <div class="card">
+                        <a href="../HTML/driver_main.html">
+                            <img src="../images/driver.jpg" class="card-img-top" alt="Driver or Riders">
+                            <div class="card-body">
+                                <p class="card-text">DRIVERS / RIDERS</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section with additional links and social media -->
+    <footer>
+        <div class="container-fluid footer">
+            <div class="row">
+                <!-- Footer logo -->
+                <div class="col">
+                    <img src="../images/footer_img.png" class="footer_img" alt="F1 Formula" />
+                </div>
+                <!-- Footer links for F1 official pages -->
+                <div class="col">
+                    <ul class="footer-list">
+                        <li><a href="https://www.formula1.com/en/latest" rel="noopener" target="_blank">Latest</a></li>
+                        <li><a href="https://www.formula1.com/en/page.what-is-f1.html" rel="noopener"
+                                target="_blank">What is F1?</a></li>
+                        <li><a href="https://tickets.formula1.com/en" rel="noopener" target="_blank">Tickets</a></li>
+                        <li><a href="https://f1experiences.com/?utm_source=formula1.com&utm_medium=referral&utm_campaign=general"
+                                rel="noopener" target="_blank">F1 Experience</a></li>
+                        <li><a href="https://f1store.formula1.com/en/?_s=bm-fi-f1-prtsite-topnav-230720-jm"
+                                rel="noopener" target="_blank">Store</a></li>
+                    </ul>
+                </div>
+                <!-- Footer links for F1 games and media -->
+                <div class="col">
+                    <ul class="footer-list">
+                        <li><a href="https://www.ea.com/en-gb/games/f1/f1-24" rel="noopener" target="_blank">F1 24</a>
+                        </li>
+                        <li><a href="https://www.f1manager.com" rel="noopener" target="_blank">F1 Manager 24</a></li>
+                        <li><a href="https://www.f1play.com" rel="noopener" target="_blank">F1 Play</a></li>
+                        <li><a href="https://www.ea.com/en-gb/games/f1" rel="noopener" target="_blank">F1 Mobile
+                                Racing</a></li>
+                    </ul>
+                </div>
+                <!-- Footer links for internal pages -->
+                <div class="col">
+                    <ul class="footer-list">
+                        <li><a href="../HTML/schedule_main.html">Season Schedules</a></li>
+                        <li><a href="../HTML/result.html">Season Results</a></li>
+                        <li><a href="../HTML/driver_main.html">Drivers/Riders</a></li>
+                        <li><a href="../HTML/team_main.html">Teams/Constructors</a></li>
+                        <li><a href="../HTML/circuits.html">Circuits</a></li>
+                    </ul>
+                </div>
+                <!-- Footer links for F1 TV and gaming -->
+                <div class="col">
+                    <ul class="footer-list">
+                        <li><a href="https://f1tv.formula1.com/" rel="noopener" target="_blank">F1 TV</a></li>
+                        <li><a href="https://www.hutch.io/our-games/f1-clash/" rel="noopener" target="_blank">F1
+                                Clash</a></li>
+                        <li><a href="https://www.formula1.com/en/gaming.html" rel="noopener" target="_blank">Gaming</a>
+                        </li>
+                        <li><a href="https://f1esports.com/" rel="noopener" target="_blank">E Sports</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Footer bottom with copyright and social media links -->
+            <div class="row footer_bottom">
+                <p class="copy_right">© <span id="currentYear"></span> All Copy Rights Reserved</p>
+                <div class="social-icons">
+                    <!-- Social media icons with links -->
+                    <a href="https://www.instagram.com/f1/" title="instagram" rel="noopener" target="_blank"><i
+                            class="ri-instagram-line"></i></a>
+                    <a href="https://www.linkedin.com/company/formula-one-management-ltd/" title="linkedin"
+                        rel="noopener" target="_blank"><i class="ri-linkedin-box-line"></i></a>
+                    <a href="https://www.youtube.com/@Formula1" title="youtube" rel="noopener" target="_blank"><i
+                            class="ri-youtube-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for schedule functionality and navbar -->
+    <script src="../JS/schedule.js"></script>
+    <script src="../JS/navbar.js"></script>
+
+    <!-- Bootstrap JavaScript for interactive components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-EjPRHzLkVoVD18t6DoRQ/e8Rexfb9Y1Nx5emEY3WJ7G8wHzW7Fj4OUF1R9rjXjsH"
+        crossorigin="anonymous"></script>
+</body>
+</html>

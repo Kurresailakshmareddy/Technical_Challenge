@@ -1,0 +1,61 @@
+:root {
+    /* Colors */
+    --bg-card: rgba(255, 255, 255, 0.2);
+    --bg-btn: rgb(255, 255, 255);
+    --color-dark: rgb(0, 0, 0);
+    --color-border: rgb(0, 0, 0);
+    --color-border-light: rgba(255, 255, 255, 0.3);
+
+    /* Spacing, Dimensions and layout */
+    --border-radius: 16px;
+    --box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --backdrop-filter: blur(5px);
+    --padding: 8px;
+    --margin: 10px auto;
+    --border-bottom: 3px solid rgb(0, 0, 0);
+    --border: 0.5px solid rgb(0, 0, 0);
+    --height-image: 400px;
+}
+
+.driverInfo {
+    margin: 60px auto;
+}
+
+#driver-name {
+    text-align: center;
+    border: none;
+}
+
+#driver-circuits a{
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.driverImage {
+    height: var(--height-image);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: var(--backdrop-filter);
+    -webkit-backdrop-filter: var(--backdrop-filter);
+    border: var(--color-border-light);
+}
+
+.card-body h5 {
+    font-weight: bold;
+    padding: var(--padding);
+    border-bottom: var(--border-bottom);
+}
+
+.driverBtn {
+    margin: var(--margin);
+    padding: var(--padding);
+    color: var(--color-dark);
+    background-color: var(--bg-btn);
+    border: var(--border);
+}

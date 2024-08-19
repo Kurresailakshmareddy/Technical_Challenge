@@ -1,0 +1,161 @@
+:root {
+    /* Colors */
+    --bg-drivers: rgba(188, 107, 107, 0.311);
+    --bg-btn: rgba(212, 71, 71, 0.311);
+    --bg-btn-hover: rgb(212, 69, 69);
+    --bg-search: rgba(218, 54, 54, 0.311);
+    --bg-nationality: rgba(218, 54, 54, 0.311);
+    --color-dark: rgb(0, 0, 0);
+    --color-light: rgb(201, 194, 194);
+    --color-light-grey: rgb(233, 197, 197);
+    --color-border: rgb(213, 20, 20);
+    --color-scrollbar-thumb: rgb(215, 211, 211);
+    --color-scrollbar-track: rgba(218, 54, 54, 0.311);
+    --color-scrollbar-thumb-hover: rgb(244, 240, 240);
+
+    /* Spacing, Dimensions and layout */
+    --border-left: 12px solid rgb(0, 0, 0);
+    --border-bottom: 6px solid rgb(0, 0, 0);
+    --border-radius: 20px;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.19);
+    --backdrop-filter: blur(5px);
+    --padding: 20px;
+    --padding-large: 15px;
+    --height-medium: 44px;
+
+    /* Font size */
+    --font-size: 15px;
+}
+
+.driversInfo {
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    padding: var(--padding);
+    overflow: hidden;
+    background: var(--bg-drivers);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: var(--backdrop-filter);
+    -webkit-backdrop-filter: var(--backdrop-filter);
+}
+
+.drivers-form {
+    display: flex;
+    margin: auto;
+    padding: var(--padding);
+    border-left: var(--border-left);
+    border-bottom: var(--border-bottom);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+#searchBox {
+    width: auto;
+    height: var(--height-medium);
+    margin-left: 50px;
+    padding: var(--padding-large);
+    border: 1px solid var(--color-light);
+    color: rgb(13, 13, 13);
+    border-radius: 5px;
+    background-color: var(--bg-search);
+}
+
+#searchBox::placeholder {
+    color: rgb(9, 9, 9);
+    font-size: var(--font-size);
+    font-weight: bolder;
+}
+
+.nationality {
+    margin: auto;
+    height: var(--height-medium);
+    padding: 10px;
+    border: 1px solid var(--color-light);
+    color: rgb(13, 13, 13);
+    border-radius: 5px;
+    background-color: var(--bg-nationality);
+    font-weight: bolder;
+    font-size: var(--font-size);
+}
+
+.drivers_btn {
+    background: var(--bg-btn);
+    margin-left: 10px;
+    border: none;
+}
+
+.drivers_btn i {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.driver-table {
+    overflow-y: auto;
+    height: 350px; /* Adjust the height as needed */
+}
+
+.driver-table a {
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.table-container {
+    width: 100%;
+    overflow: auto; /* This ensures the table can scroll horizontally if needed */
+}
+
+.driver-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+    color: var(--color-dark);
+}
+
+.driver-table table th,
+table td {
+    padding: 12px 15px;
+}
+
+.driver-table table thead th {
+    background-color: var(--color-light-grey);
+    color: rgb(6, 6, 6);
+    text-align: left;
+    font-weight: 600;
+}
+
+.driver-table table tbody tr {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.driver-table table tbody tr:hover {
+    background-color: rgba(210, 107, 107, 0.596);
+    cursor: pointer;
+}
+
+.driver-table::-webkit-scrollbar,
+.nationality::-webkit-scrollbar {
+    width: 12px;
+}
+
+.driver-table::-webkit-scrollbar-track,
+.nationality::-webkit-scrollbar-track {
+    background: var(--color-scrollbar-track);
+    border-radius: 10px;
+}
+
+.driver-table::-webkit-scrollbar-track{
+    margin-top: 30px;
+}
+
+.driver-table::-webkit-scrollbar-thumb,
+.nationality::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar-thumb);
+    border-radius: 10px;
+    border: 3px solid var(--color-scrollbar-track);
+}
+
+.driver-table::-webkit-scrollbar-thumb:hover,
+.nationality::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-scrollbar-thumb-hover);
+}

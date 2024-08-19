@@ -1,0 +1,130 @@
+:root {
+    /* Colors */
+    --bg-color-card: rgba(255, 255, 255, 0.2);
+    --bg-color-card-body: rgba(255, 255, 255, 0.2);
+    --border-color-card: rgba(255, 255, 255, 0.3);
+    --color-heading: rgb(0, 0, 0);
+    --color-btn: rgb(0, 0, 0);
+    --color-btn-bg: rgb(255, 255, 255);
+    --color-table-header: rgb(204, 73, 73);
+    --color-table-row-hover: rgba(210, 107, 107, 0.596);
+    --color-scrollbar-track: rgba(218, 54, 54, 0.311);
+    --color-scrollbar-thumb: rgb(233, 24, 24);
+    --color-scrollbar-thumb-hover: rgb(255, 0, 0);
+    --border-color-row: rgba(213, 20, 20, 0.765);
+    --circuitBtn-color:rgb(212, 29, 29);
+
+    /* Spacing, Dimensions and layout */
+    --box-shadow-card: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --backdrop-blur: blur(5px);
+    --font-size-table: 18px;
+    --padding-table: 12px 15px;
+    --border-radius: 16px;
+    --border-radius-small: 8px;
+    --transition-speed: 0.3s;
+    --height-scroll: 350px;
+}
+
+#circuit-name {
+    text-align: center;
+    border: none;
+}
+
+.circuit-image {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.card {
+    background: var(--bg-color-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-card);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    border: 1px solid var(--border-color-card);
+}
+
+.card-body h5 {
+    font-weight: bold;
+    padding: 8px;
+    border-bottom: 3px solid var(--color-heading);
+}
+
+.circuitBtn {
+    margin: 10px auto;
+    padding: 5px;
+    color: var(--color-btn);
+    background-color: var(--color-btn-bg);
+    border: 0.5px solid var(--color-heading);
+}
+
+.circuitBtn:hover{
+    color: var(--circuitBtn-color);
+}
+
+#circuit-table-container,
+#pit-stop-summary-container {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: var(--font-size-table);
+    text-align: left;
+    color: var(--color-heading);
+    overflow-y: auto;
+    height: var(--height-scroll);
+}
+
+#circuit-table-container table a,
+#pit-stop-summary-container table a {
+    text-decoration: none;
+    color: var(--color-heading);
+}
+
+#circuit-table-container table th,
+#pit-stop-summary-container table th,
+#circuit-table-container table td,
+#pit-stop-summary-container table td {
+    padding: var(--padding-table);
+}
+
+#circuit-table-container table thead th,
+#pit-stop-summary-container table thead th {
+    background-color: var(--color-table-header);
+    color: rgb(6, 6, 6);
+    text-align: left;
+    font-weight: 600;
+}
+
+#circuit-table-container table tbody tr,
+#pit-stop-summary-container table tbody tr {
+    border-bottom: 1px solid var(--border-color-row);
+}
+
+#circuit-table-container table tbody tr:hover,
+#pit-stop-summary-container table tbody tr:hover {
+    background-color: var(--color-table-row-hover);
+    cursor: pointer;
+}
+
+#circuit-table-container::-webkit-scrollbar,
+#pit-stop-summary-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+#circuit-table-container::-webkit-scrollbar-track,
+#pit-stop-summary-container::-webkit-scrollbar-track {
+    background: var(--color-scrollbar-track);
+    border-radius: var(--border-radius-small);
+}
+
+#circuit-table-container::-webkit-scrollbar-thumb,
+#pit-stop-summary-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar-thumb);
+    border-radius: var(--border-radius-small);
+    border: 3px solid var(--color-scrollbar-track);
+}
+
+#circuit-table-container::-webkit-scrollbar-thumb:hover,
+#pit-stop-summary-container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-scrollbar-thumb-hover);
+}

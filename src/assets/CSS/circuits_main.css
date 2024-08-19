@@ -1,0 +1,163 @@
+:root {
+    /* Colors */
+    --circuits-info-bg: rgba(188, 107, 107, 0.311);
+    --circuits-form-border: 12px solid rgb(0, 0, 0);
+    --circuits-form-bottom-border: 6px solid rgb(0, 0, 0);
+    --search-box-bg: rgba(218, 54, 54, 0.311);
+    --search-box-border: 1px solid rgb(201, 194, 194);
+    --country-bg: rgba(218, 54, 54, 0.311);
+    --circuits-btn-bg: rgba(212, 71, 71, 0.311);
+    --table-bg: rgb(233, 197, 197);
+    --table-border: rgb(213, 20, 20);
+    --table-hover-bg: rgba(210, 107, 107, 0.596);
+    --scrollbar-track-bg: rgba(218, 54, 54, 0.311);
+    --scrollbar-thumb-bg: rgb(215, 211, 211);
+    --scrollbar-thumb-hover-bg: rgb(244, 240, 240);
+
+    /* Spacing, Dimensions and layout */
+    --max-width: 800px;
+    --height: 44px;
+    --padding: 20px;
+    --border-radius: 5px;
+    --font-size: 15px;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.19);
+    --backdrop-filter: blur(5px);
+    --margin-left: 50px;
+    --btn-font-size: 1.5rem;
+    --table-height: 350px;
+    --scrollbar-width: 12px;
+    --scrollbar-border: 3px solid rgba(218, 54, 54, 0.311);
+}
+
+.circuitsInfo {
+    max-width: var(--max-width);
+    height: auto;
+    margin: 20px auto;
+    padding: var(--padding);
+    overflow: hidden;
+    background: var(--circuits-info-bg);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: var(--backdrop-filter);
+    -webkit-backdrop-filter: var(--backdrop-filter);
+}
+
+.circuits-form {
+    display: flex;
+    margin: auto;
+    padding: var(--padding);
+    border-left: var(--circuits-form-border);
+    border-bottom: var(--circuits-form-bottom-border);
+    border-bottom-left-radius: 20px;
+}
+
+#searchBox {
+    width: auto;
+    height: var(--height);
+    padding: 15px;
+    margin-left: var(--margin-left);
+    border: var(--search-box-border);
+    color: rgb(13, 13, 13);
+    border-radius: var(--border-radius);
+    background-color: var(--search-box-bg);
+}
+
+#searchBox::placeholder {
+    color: rgb(9, 9, 9);
+    font-size: var(--font-size);
+    font-weight: bolder;
+}
+
+.country {
+    margin: auto;
+    height: var(--height);
+    padding: 10px;
+    border: var(--search-box-border);
+    color: rgb(13, 13, 13);
+    border-radius: var(--border-radius);
+    background-color: var(--country-bg);
+    font-weight: bolder;
+    font-size: var(--font-size);
+}
+
+.circuits_btn {
+    background: var(--circuits-btn-bg);
+    border: none;
+    margin-left: 10px;
+}
+
+.circuits_btn i {
+    cursor: pointer;
+    font-size: var(--btn-font-size);
+}
+
+.circuit-table {
+    overflow-y: auto;
+    height: var(--table-height);
+}
+
+.circuit-table a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.table-container {
+    width: 100%;
+    overflow: auto;
+}
+
+.circuit-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.circuit-table table th,
+table td {
+    padding: 12px 15px;
+}
+
+.circuit-table table thead th {
+    background-color: var(--table-bg);
+    color: rgb(6, 6, 6);
+    text-align: left;
+    font-weight: 600;
+}
+
+.circuit-table table tbody tr {
+    border-bottom: 1px solid var(--table-border);
+}
+
+.circuit-table table tbody tr:hover {
+    background-color: var(--table-hover-bg);
+    cursor: pointer;
+}
+
+.circuit-table::-webkit-scrollbar,
+.country::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+}
+
+.circuit-table::-webkit-scrollbar-track,
+.country::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-bg);
+    border-radius: 10px;
+}
+
+.circuit-table::-webkit-scrollbar-track{
+    margin-top: 30px;
+}
+
+.circuit-table::-webkit-scrollbar-thumb,
+.country::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-bg);
+    border-radius: 10px;
+    border: var(--scrollbar-border);
+}
+
+.circuit-table::-webkit-scrollbar-thumb:hover,
+.country::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover-bg);
+}

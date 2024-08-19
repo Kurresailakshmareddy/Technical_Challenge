@@ -1,0 +1,165 @@
+:root {
+    /* Colors */
+    --bg-team-info: rgba(188, 107, 107, 0.311);
+    --bg-search-box: rgba(218, 54, 54, 0.311);
+    --bg-nationality: rgba(218, 54, 54, 0.311);
+    --bg-team-btn: rgba(212, 71, 71, 0.311);
+    --color-text-dark: rgb(13, 13, 13);
+    --color-text-light: rgb(0, 0, 0);
+    --color-border-light: rgb(201, 194, 194);
+    --color-border-dark: black;
+    --color-header-bg: rgb(233, 197, 197);
+    --color-header-text: rgb(6, 6, 6);
+    --color-border-table: rgb(213, 20, 20);
+    --color-hover-bg: rgba(210, 107, 107, 0.596);
+    --color-scroll-thumb: rgb(215, 211, 211);
+    --color-scroll-thumb-hover: rgb(244, 240, 240);
+    --border-radius: 10px;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.19);
+    --backdrop-filter: blur(5px);
+    --padding: 20px;
+    --padding-search-box: 15px;
+    --padding-nationality: 10px;
+    --font-size-input: 15px;
+    --font-weight-bold: bolder;
+    --font-size-btn: 1.5rem;
+    --height-input: 44px;
+    --margin-left-search-box: 50px;
+    --margin-left-nationality: 30px;
+    --margin-btn: 10px;
+    --height-table: 350px;
+}
+
+.teamInfo {
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    padding: var(--padding);
+    overflow: hidden;
+    background: var(--bg-team-info);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: var(--backdrop-filter);
+    -webkit-backdrop-filter: var(--backdrop-filter);
+}
+
+.team-form {
+    display: flex;
+    margin: auto;
+    padding: 25px;
+    border-left: 12px solid var(--color-border-dark);
+    border-bottom: 6px solid var(--color-border-dark);
+    border-bottom-left-radius: 20px;
+}
+
+#searchBox {
+    width: auto;
+    height: var(--height-input);
+    margin-left: var(--margin-left-search-box);
+    padding: var(--padding-search-box);
+    border: 1px solid var(--color-border-light);
+    color: var(--color-text-dark);
+    border-radius: 5px;
+    background-color: var(--bg-search-box);
+}
+
+#searchBox::placeholder {
+    color: var(--color-text-light);
+    font-size: var(--font-size-input);
+    font-weight: var(--font-weight-bold);
+}
+
+.nationality {
+    margin: auto;
+    height: var(--height-input);
+    padding: var(--padding-nationality);
+    border: 1px solid var(--color-border-light);
+    color: var(--color-text-dark);
+    border-radius: 5px;
+    background-color: var(--bg-nationality);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-input);
+}
+
+.team_btn {
+    background: var(--bg-team-btn);
+    margin-left: var(--margin-btn);
+    border: none;
+}
+
+.team_btn i {
+    cursor: pointer;
+    font-size: var(--font-size-btn);
+}
+
+.team-table {
+    overflow-y: auto;
+    height: var(--height-table);
+}
+
+.team-table a {
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+
+.table-container {
+    width: 100%;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.team-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+    color: var(--color-text-light);
+}
+
+.team-table table th,
+table td {
+    padding: 12px 15px;
+}
+
+.team-table table thead th {
+    background-color: var(--color-header-bg);
+    color: var(--color-header-text);
+    text-align: left;
+    font-weight: 600;
+}
+
+.team-table table tbody tr {
+    border-bottom: 1px solid var(--color-border-table);
+}
+
+.team-table table tbody tr:hover {
+    background-color: var(--color-hover-bg);
+    cursor: pointer;
+}
+
+.team-table::-webkit-scrollbar,
+.nationality::-webkit-scrollbar {
+    width: 12px;
+}
+
+.team-table::-webkit-scrollbar-track,
+.nationality::-webkit-scrollbar-track {
+    background: var(--bg-nationality);
+    border-radius: var(--border-radius);
+}
+
+.team-table::-webkit-scrollbar-track{
+    margin-top: 30px;
+}
+
+.team-table::-webkit-scrollbar-thumb,
+.nationality::-webkit-scrollbar-thumb {
+    background-color: var(--color-scroll-thumb);
+    border-radius: var(--border-radius);
+    border: 3px solid var(--bg-nationality);
+}
+
+.team-table::-webkit-scrollbar-thumb:hover,
+.nationality::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-scroll-thumb-hover);
+}

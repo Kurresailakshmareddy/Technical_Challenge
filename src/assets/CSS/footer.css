@@ -1,0 +1,92 @@
+:root {
+    /* Colors */
+    --footer-bg-color: rgb(51, 51, 51);
+    --footer-text-color: rgb(255, 255, 255);
+    --footer-border-color: rgb(0, 0, 0);
+    --footer-link-color: rgb(255, 255, 255);
+    --footer-link-hover-color: rgb(255, 0, 0);
+    --social-icon-color: rgb(255, 255, 255);
+    --social-icon-hover-color: rgb(255, 0, 0);
+
+    /* Spacing, Dimensions and layout */
+    --footer-padding: 30px 0;
+    --footer-list-padding: 20px;
+    --footer-list-margin-top: 100px;
+    --footer-list-margin-left: 50px;
+    --footer-list-border-left: 5px solid var(--footer-border-color);
+    --footer-list-border-bottom: 5px solid var(--footer-border-color);
+    --footer-list-border-radius: 0 0 0 20px;
+    --social-icon-size: 2rem;
+    --social-icon-margin: 0 10px;
+
+    /* Other */
+    --social-icon-transition: color 0.3s;
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    padding: var(--footer-padding);
+}
+
+.footer .row {
+    margin-bottom: 20px;
+}
+
+.footer_img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-list {
+    list-style-type: none;
+    padding: var(--footer-list-padding);
+    margin-top: var(--footer-list-margin-top);
+    margin-left: var(--footer-list-margin-left);
+    border-left: var(--footer-list-border-left);
+    border-bottom: var(--footer-list-border-bottom);
+    border-radius: var(--footer-list-border-radius);
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list a {
+    color: var(--footer-link-color);
+    text-decoration: none;
+}
+
+.footer-list a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--footer-link-hover-color);
+}
+
+.copy_right {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer_bottom {
+    text-align: center;
+}
+
+.social-icons {
+    margin: auto;
+}
+
+.social-icons i {
+    margin: var(--social-icon-margin);
+    font-size: var(--social-icon-size);
+    color: var(--social-icon-color);
+    text-decoration: none;
+    transition: var(--social-icon-transition);
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-icons i:hover {
+    color: var(--social-icon-hover-color);
+}
