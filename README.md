@@ -56,7 +56,7 @@ To set up and run this project locally, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/f1-data-visualization-web-app.git
+   git clone https://github.com/Kurresailakshmareddy/Technical_Challenge.git
 
 2. **Ensure Docker is Installed**
 
