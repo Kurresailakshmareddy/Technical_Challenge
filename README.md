@@ -88,6 +88,57 @@ To set up and run this project locally, follow these steps:
    - Open your web browser and navigate to <http://localhost:8080>.
    - Open your web browser and navigate with your IP address link provided in terminal after entering the command "(docker run -p 8080:8080 'your specific image name')". **Ex:** <http://111.0.0.0:8080>
 
+## Tools and Languages
+
+- ```HTML```, ```CSS```, ```JavaScript```, ```BootStrap``` and ```Docker```
+
+## Future Developments
+
+To continuously enhance and expand the functionality of the F1 application, the following future developments are suggested:
+
+### 1. Personalized User Experience
+
+- **User Profiles and Dashboards**: Introduce user profiles where fans can save their favorite drivers, teams, and circuits. Personalized dashboards will display tailored content, including recent results, news, and statistics related to the user’s favorites.
+- **Custom Alerts and Notifications**: Implement a notification system that allows users to receive alerts for upcoming races, changes in standings, or new content related to their favorite drivers or teams.
+- **Watchlist Feature**: Add a watchlist feature where users can track specific races or events and receive reminders or updates about them.
+
+### 2. Advanced Data Analytics and Visualization
+
+- **Data Comparison Tool**: Develop a tool that enables users to compare statistics between drivers, teams, or seasons using side-by-side visualizations, such as graphs comparing lap times, win rates, or pit stop efficiencies.
+- **Predictive Analytics**: Incorporate machine learning models to predict race outcomes or driver performances based on historical data, and display these predictions alongside actual statistics.
+- **Interactive Race Replay**: Create an interactive feature that allows users to replay races with detailed lap-by-lap data, including positions, overtakes, and incidents, presented with interactive graphs and charts.
+
+### 3. Enhanced Interaction and Community Features
+
+- **Discussion Forums and Social Features**: Integrate forums or comment sections for fans to discuss races, teams, and share insights. Social sharing options can be added to boost community engagement.
+- **Fantasy F1 Integration**: Develop a fantasy league feature where users can create their own teams, draft drivers, and compete based on real-world race results.
+- **User-Generated Content**: Allow users to contribute content, such as race reviews, circuit guides, or driver profiles, which can be moderated and featured within the app.
+
+### 4. Augmented Reality (AR) and Virtual Reality (VR)
+
+- **AR Circuit Overviews**: Implement AR features that let users view circuits in 3D using mobile devices, with interactive elements showing historical data, famous overtakes, or notable incidents at specific track locations.
+- **VR Race Experiences**: Provide virtual reality experiences where users can "attend" races in VR, experiencing them from different angles, such as the pit lane, grandstands, or even on-board with a driver.
+
+### 5. Enhanced Mobile Experience
+
+- **Mobile App Development**: Develop a companion mobile app offering features like live race tracking, push notifications for race starts and standings changes, and mobile-optimized versions of data visualizations.
+- **Offline Mode**: Implement an offline mode that allows users to download specific data (like race results or driver biographies) for viewing without internet access, useful for fans attending races in areas with poor connectivity.
+
+### 6. Integration with External Data Sources
+
+- **Weather and Track Conditions**: Integrate live weather data and track condition updates for each race event, potentially affecting predictions and race outcome discussions.
+- **Social Media Integration**: Pull in social media feeds (e.g., Twitter, Instagram) related to drivers, teams, and races to provide a real-time social context.
+- **News and Updates**: Integrate with F1 news outlets or blogs to display the latest news, updates, and interviews alongside relevant stats and data.
+
+### 7. Gamification
+
+- **Achievement System**: Introduce an achievement or badge system for users who regularly interact with the app, such as viewing a certain number of races, predicting race outcomes, or completing specific challenges.
+- **Interactive Quizzes and Challenges**: Include F1-related quizzes or prediction challenges where users can test their knowledge or predict race outcomes, with leaderboards and rewards for top performers.
+
+### 8. Enhanced Multimedia Content
+
+- **Race Highlights and Recaps**: Embed video highlights and recaps of races, allowing users to catch up on key moments and performances directly within the app.
+
 ## Data Source
 
 - Formula 1 Data: Ergast API (<http://ergast.com/mrd/>)
